@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import BotCollection from "./BotCollection";
+import YourBotArmy from "./YourBotArmy";
 
 function App() {
+  const [bots, setBots] = useState([]);
+  const [enlistedBots, setEnlistedBots] = useState([]);
+  const [filters, setFilters] = useState([]);
+  const [sortBy, setSortBy] = useState(null);
+
+  // logic for enlisting and releasing bots
+
+  // logic for filtering and sorting
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BotCollection />
+      <YourBotArmy />
     </div>
   );
 }
 
 export default App;
+
