@@ -1,12 +1,19 @@
-import React, { useState } from "react";
+
+
+import React, { useState, useEffect } from "react";
 import BotCollection from "./BotCollection";
 import YourBotArmy from "./YourBotArmy";
 
 function App() {
   const [bots, setBots] = useState([]);
   const [enlistedBots, setEnlistedBots] = useState([]);
-  const [filters, setFilters] = useState([]);
-  const [sortBy, setSortBy] = useState(null);
+
+  useEffect(() => {
+    fetch("db.json")
+      .then(response => response.json())
+      .then(data => setBots(data.bots))
+      .catch(error => console.error("Error fetching bots:", error));
+  }, []);
 
   // logic for enlisting and releasing bots
 
@@ -21,4 +28,5 @@ function App() {
 }
 
 export default App;
+
 
