@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import BotCollection from './components/BotCollection';
-import YourBotArmy from './components/YourBotArmy';
-import SortBar from './components/SortBar';
-import FilterBar from './components/FilterBar';
+import BotCollection from './components/Botcollection';
+import YourBotArmy from './components/Yourbotarmy';
+import SortBar from './components/Sortbar';
+import FilterBar from './components/Filterbar';
 
 function App() {
   const [bots, setBots] = useState([]);
