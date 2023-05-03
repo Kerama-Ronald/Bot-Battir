@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import AllBots from './allBots';
+import AllBots from './Allbots';
 // import AllBots from './allBots';
 
 function SelectedBots() {
