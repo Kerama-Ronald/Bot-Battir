@@ -10,7 +10,7 @@ function App() {
 
   useEffect(() => {
     // Fetch data from the API endpoint
-    fetch('')
+    fetch('https://bots-database.onrender.com/bots')
       .then((response) => response.json())
       .then((data) => setBots(data.bots));
   }, []);
