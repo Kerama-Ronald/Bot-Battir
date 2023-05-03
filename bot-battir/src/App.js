@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import BotCollection from './components/Botcollection';
-import YourBotArmy from './components/Yourbotarmy';
-import SortBar from './components/Sortbar';
-import FilterBar from './components/Filterbar';
+import Botcollection from './components/Botcollection';
+import Yourbotarmy from './components/Yourbotarmy';
+import Sortbar from './components/Sortbar';
+import Filterbar from './components/Filterbar';
 
 function App() {
   const [bots, setBots] = useState([]);
@@ -48,11 +48,11 @@ function App() {
     <div className="App">
       <h1>Bot Army</h1>
       <div className="filters">
-        <SortBar sortBots={sortBots} />
-        <FilterBar filterBots={filterBots} />
+        <Sortbar sortBots={sortBots} />
+        <Filterbar filterBots={filterBots} />
       </div>
-      <BotCollection bots={bots} addToArmy={addToArmy} dischargeBot={dischargeBot} />
-      <YourBotArmy army={army} removeFromArmy={removeFromArmy} />
+      <Botcollection bots={bots} addToArmy={addToArmy} dischargeBot={dischargeBot} />
+      <Yourbotarmy army={army} removeFromArmy={removeFromArmy} />
     </div>
   );
 }
